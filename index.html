@@ -17,7 +17,8 @@
 .menulateral{
 	background-color: white;
 	width: 250;
-	height: 100%
+	height: 100;%
+        position: fixed;
 }
 	</style>
 	<html lang="pt-br">
@@ -32,6 +33,7 @@
 		        <h1 style="font: sans-serif; font-family: sans-serif; color: white;">Hell Teixeira</h1>
 			<nav class="menulateral">
 				<div class="titulo" style="font-family: sans-serif; color="darkred">Hell Teixeira</div>
+				<button id="btn-close">X</button>
 				    <ul>
 	                               <li><a style="color: darkred; font-family: sans-serif" href="#home">Página Inicial</a></li>
 				       <li><a style="color: darkred; font-family: sans-serif" href="#info">Informações</a></li>
@@ -65,6 +67,7 @@
     <script type="text/javascript">
     $('.btnmenu').click(function(){
                 $('.menulateral').toggleclass('mostra');
+		$menulateral.removeclass('mostra')
 })
     </script>
 </body>
