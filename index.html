@@ -76,7 +76,16 @@
 	    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfofm7JVsEfSdx2JmEVUEKSF0V6SFcNpczCkhBRcPAvWX5TsA/viewform?embedded=true" width="600" height="450" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
     </footer>
    <script> 
-   $('.nav a[href^="#"]').on('click', function(e) {
+   $('.nav a[href^="#home"]').on('click', function(e) {
+  e.preventDefault();
+  var id = $(this).attr('href'),
+  targetOffset = $(id).offset().top;
+    
+  $('html, body').animate({ 
+    scrollTop: targetOffset - 100
+  }, 500);
+});
+      $('.nav a[href^="#info"]').on('click', function(e) {
   e.preventDefault();
   var id = $(this).attr('href'),
   targetOffset = $(id).offset().top;
