@@ -5,19 +5,18 @@
 .calho{
     display: block;
     height: 75PX;
-    width: 187vh;
+    width: 100%;
 }
-.cabecalho{
+#cabecalho{
     border-color: whitesmoke;
 	background-color: white;
 	border-style: outset;
-    border-width: 75px;
-    width: 187vh;
+    width: 100%;
 	
 }
 .desc{
 	height: 25px;
-	width: 187vh;
+	width: 100%;
 }
 .rodape{
 	border-style: outset;
@@ -45,14 +44,22 @@ body{
 	<title>Hell Teixeira</title>
 </head>
 <body>
-	<div class="cabecalho">
+	<div id="cabecalho">
 	<div class="calho" id="cabecalhoum" style="background-color: white;">
 		<header class="cabe">
 		<h1 style="padding: 5px; font: sans-serif; font-family: sans-serif; color: darkred;">Hell Teixeira</h1>
 	<header class="desc" style="background-color: darkred;">
 		<p style="font-family: sans-serif; color: White;"><b>Advocacia e Assessoria Jurídica</b></
        </header>	 
-        </div>
+	<header style="color: darkred; font-family: sans-serif;" classs="linkpag">
+		<ul class="nav">
+	<li><a href="#qsms">Quem somos?</a></li>
+	<li><a href="#info">Contato</a></li>
+	<li><a href="#cabecalho">Home</a></li>
+	
+</ul>
+	</header>
+	</div>
         </div>
    <br>
    <br>
@@ -60,7 +67,7 @@ body{
    <br>
   <div class="corpo">
   </div>
-		<div class="qsms" id="qs">
+		<div id="qsms" id="qs">
 			<center><h1 style="color: darkred; font-family: sans-serif;">Quem somos?</h1></center>
 			<center><iframe src="https://docs.google.com/document/d/e/2PACX-1vTQgVvA9jJ46fevow5cmyI1LehudX-ErbYm1bZhUdqIOlbpXKb7L8DgnPZSfLI8dGBLvgte4WPPNVym/pub?embedded=true" width="1000px" height="500px"></iframe></center>
    <br>    
