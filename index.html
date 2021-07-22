@@ -2,6 +2,18 @@
 <html>	
 <head>
 	<script type="text/javascript" src="script.js"></script>
+	<script>
+	$('.nav a[href^="#"]').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+	$('html, body').animate({ 
+		scrollTop: targetOffset - 100
+	}, 500);
+});     
+
+	</script>
 	<style>
 .calho{
     display: block;
