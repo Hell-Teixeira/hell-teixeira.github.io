@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html>	
-<head>  <script>
-	(() => {
-  if (!localStorage.pureJavaScriptCookies) {
-    document.querySelector(".box-cookies").classList.remove('hide');
+<head>
+	<script>
+	function cookies(functions) {
+  const container = document.querySelector('.cookies-container');
+  const save = document.querySelector('.cookies-save');
+  if (!container || !save) return null;
+
+  const localPref = JSON.parse(window.localStorage.getItem('cookies-pref'));
+  if (localPref) activateFunctions(localPref);
+
+  function getFormPref() {
+    return [...document.querySelectorAll('[data-function]')]
+      .filter((el) => el.checked)
+      .map((el) => el.getAttribute('data-function'));
   }
-  
-  const acceptCookies = () => {
-    document.querySelector(".box-cookies").classList.add('hide');
-    localStorage.setItem("pureJavaScriptCookies", "accept");
-  };
-  
-  const btnCookies = document.querySelector(".btn-cookies");
-  
-  btnCookies.addEventListener('click', acceptCookies);
-})();
-	</script>
+
+  function activateFunctions(pref) {
+    pref.forEach((f) => functions[f]());
+    container.style.display = 'none';
+    window.localStorage.setItem('cookies-pref', JSON.stringify(pref));
+  }
+
+  function handleSave() {
+    const pref = getFormPref();
+    activateFunctions(pref);
+  }
+
+  save.addEventListener('click', handleSave);
+}
+
+function marketing() {
+  console.log('Função de marketing');
+}
+
+function analytics() {
+  console.log('Função de analytics');
+}
+
+cookies({
+  marketing,
+  analytics,
+});	
+	</script>	
 	<style>
 body::-webkit-scrollbar {
   width: 12px;             
@@ -139,7 +166,37 @@ html{
 	</style>
 	<html lang="pt-br">
 	<meta charset="utf-8">
-	<link rel="shotcut icon" href="https://1.bp.blogspot.com/-453AtAaVQH0/YLrEJj3jclI/AAAAAAAAEZE/RTKNOYcOAkwl6WaoigXMT6uW6XbNRLquACLcBGAsYHQ/s320/LOGO%2BHT.jpg">
+	<link rel="shotcut icon" href="https://1.bp.blogspot.com/-453AtAaVQH0/YLrEJj  <script>
+4
+        (() => {
+5
+  if (!localStorage.pureJavaScriptCookies) {
+6
+    document.querySelector(".box-cookies").classList.remove('hide');
+7
+  }
+8
+  
+9
+  const acceptCookies = () => {
+10
+    document.querySelector(".box-cookies").classList.add('hide');
+11
+    localStorage.setItem("pureJavaScriptCookies", "accept");
+12
+  };
+13
+  
+14
+  const btnCookies = document.querySelector(".btn-cookies");
+15
+  
+16
+  btnCookies.addEventListener('click', acceptCookies);
+17
+})();
+18
+        </script>3jclI/AAAAAAAAEZE/RTKNOYcOAkwl6WaoigXMT6uW6XbNRLquACLcBGAsYHQ/s320/LOGO%2BHT.jpg">
 	<title>Hell Teixeira</title>
 </head>
 <body>
@@ -193,9 +250,12 @@ html{
 	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.962604951376!2d-40.29153898580569!3d-20.343163456541394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8161560403c23%3A0x274908d81d2fe548!2sSN%20Office%20Tower!5e0!3m2!1spt-BR!2sbr!4v1625607163991!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 	    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfofm7JVsEfSdx2JmEVUEKSF0V6SFcNpczCkhBRcPAvWX5TsA/viewform?embedded=true" width="600" height="450" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
 		</footer>
-	<div class="box-cookies hide">
-   <p class="msg-cookies">Este site usa cookies para garantir que você obtenha a melhor experiência.</p>
-   <button class="btn-cookies">Aceitar!</button>
+	  <div class="cookies-container">
+    <div class="cookies-content">
+	    <p style="font-family: sans-serif;">Este site usa cookies para melhorar sua experiência</p>
+      <button style="border-radius: 7px; border-style: solid; background-color: darkred;" class="cookies-save">Aceito</button>
+    </div>
+  </div>
 </div>     
 </body>
 </html>
