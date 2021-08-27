@@ -70,30 +70,14 @@ html{
 	width: 100%;
 }
 *{margin: 0; padding: 0;}
-
-body{
-font-family: arial, helvetica, sans-serif;
-font-size: 12px;
-}
-
 .dropdownmenu{
-list-style:none;
-border:1px solid #c0c0c0;
-float:left;
+	background: white;
+	border-style: solid;
+	display: none;
 }
-.dropwdownmenu li{
-position:relative;
-float:left;
-border-right:1px solid #c0c0c0;
+.btn-menu: hover .dropdownmenu{
+	display: block;
 }
-.dropdownmenu li  ul{
-position:absolute;
-top:25px;
-left:0;
-background-color:#fff;
-display:none;
-}
-.dropdownmenu li:hover ul, .dropdownmenu li.over ul{display:block;}
 	</style>
 	<meta charset="utf-8">
 	<link rel="shotcut icon" href="https://1.bp.blogspot.com/-453AtAaVQH0/YLrEJj3jclI/AAAAAAAAEZE/RTKNOYcOAkwl6WaoigXMT6uW6XbNRLquACLcBGAsYHQ/s320/LOGO%2BHT.jpg">
@@ -114,7 +98,7 @@ display:none;
 	<li><a href="#adatua">Área de Atuação</a></li>
 	<li><a href="#adv">Equipe</a></li>
 	<li><a href="#contato">Contato</a></li>
-	<li><a href="#">Mais</li></a>
+	<li><a class="btn-menu" href="#">Mais</li></a>
 		<ul class="dropdownmenu">
 	                  <li><a href="#">Web Design</a></li>
 	                  <li><a href="#">SEO</a></li>
