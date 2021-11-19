@@ -314,6 +314,26 @@ OAB-ES 31.948
 	    <br>
 	    <br>
 	   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7481.923397022174!2d-40.2916978!3d-20.3432009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8161560403c23%3A0x274908d81d2fe548!2sSN%20Office%20Tower!5e0!3m2!1spt-BR!2sbr!4v1630080157209!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/3341b6d6cc4a3b450b9b753077f73494.js"></script>
+		<div class="cookies-container hide" style="float: right; position: fixed; padding: 5px;">
+			<h1>Os cookies</h1>
+			<p>Esse site usa cookies para melhorar sua experiência!</p>
+			<button class="btn-cookies" onclick="cookies" style="color: white; background: darkred; border: none;">Aceito!</button>
+		</div>
+		<script>
+function cookies() {
+  if (!localStorage.pureJavaScriptCookies) {
+    document.querySelector(".cookies-container").classList.remove('hide');
+  }
+  const acceptCookies = () => {
+    document.querySelector(".cookies-container").classList.add('hide');
+    localStorage.setItem("pureJavaScriptCookies", "accept");
+  };
+  
+  const btnCookies = document.querySelector(".btn-cookies");
+  
+  btnCookies.addEventListener('click', acceptCookies);
+})();
+	
+			</script>
 </body>
 </html>
