@@ -86,8 +86,14 @@ ul li a:hover {
 	color: darkred;
 	text-align: right;
 }
+cookies-container{
+	display: block;
+}
 html{
 	scroll-behavior: smooth;
+}
+.btn-cookies:active ~ cookies-container{
+		display: none;
 }
 .home{
 	background-color: darkred;
@@ -119,6 +125,7 @@ html{
 	font-family: sans-serif;
 	color: black;
 }
+		
 *{margin: 0; padding: 0;}
 /* Dropdown Button */
 .dropbtn {
@@ -140,6 +147,7 @@ html{
   position: relative;
   display: inline-block;
 }
+	
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -308,10 +316,10 @@ OAB-ES 31.948
 	    <br>
 	    <br>
 	   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7481.923397022174!2d-40.2916978!3d-20.3432009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8161560403c23%3A0x274908d81d2fe548!2sSN%20Office%20Tower!5e0!3m2!1spt-BR!2sbr!4v1630080157209!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-		<div style="float: right;">
+		<div class="cookies-container" style="float: right; position: fixed; padding: 5px;">
 			<h1>Nosso site usa cookies</h1>
 			<p>Esse site usa cookies para melhorar sua experiência!</p>
-			<button style="color: white; background: darkred; border: none;">Aceito!</button>
+			<button class="btn-cookies" style="color: white; background: darkred; border: none;">Aceito!</button>
 		</div>
 			</body>
 </html>
